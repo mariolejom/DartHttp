@@ -15,32 +15,12 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: customContainer(),
+      body: Container(),
 //      floatingActionButton: FloatingActionButton(
 //        onPressed: _incrementCounter,
 //        tooltip: 'Increment',
 //        child: Icon(Icons.add),
 //      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
-  }
-  Widget customContainer(){
-    return Container(
-      width: double.infinity,
-      height: double.infinity,
-      //color: Colors.red,
-      padding: EdgeInsets.all(16),
-      margin: EdgeInsets.all(16),
-      alignment: Alignment.center,
-      child: Text("Platzi".toUpperCase()),
-      decoration: BoxDecoration(
-        color: Colors.purple,
-        border: Border.all(
-          color: Colors.teal,
-          width: 5,
-        ),
-      ),
-      transform: Matrix4.rotationZ(.05),
-      constraints: BoxConstraints(maxWidth: 100),
     );
   }
 }
