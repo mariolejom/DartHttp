@@ -67,7 +67,7 @@ class CustomGradientButton extends StatelessWidget {
         width: width,
         height: height,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(topRight: Radius.circular(height/2)),
+          borderRadius: BorderRadius.all(Radius.circular(height/2)),
             gradient: LinearGradient(
                 colors: gradientColors,
                 begin: initialPosition,
