@@ -19,31 +19,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: FutureBuilder<List<Photos>>(
-        future: api.getPhotos(),
-        builder: (BuildContext context, AsyncSnapshot<List<Photos>> snapshot) {
-          if (snapshot.hasData &&
-              snapshot.connectionState == ConnectionState.done) {
-            return ListView.builder(
-              itemCount: snapshot.data.length,
-                itemBuilder: (BuildContext context, int index){
-                return Card(
-                  child: ListTile(
-                    leading: CircleAvatar(
-                      radius: 30,
-                      backgroundImage: NetworkImage(snapshot.data[index].thumbnailUrl),
-                    ),
-                    title: Text(snapshot.data[index].id.toString()),
-                    subtitle: Text("Descripción del album ${snapshot.data[index].id}"),
-                  ),
-                );
-
-            });
-          } else {
-            return Center(child: CircularProgressIndicator());
-          }
-        },
-      ),
+      body: Container(),
 //      floatingActionButton: FloatingActionButton(
 //        onPressed: _incrementCounter,
 //        tooltip: 'Increment',
